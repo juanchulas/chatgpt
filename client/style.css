@@ -29,7 +29,7 @@ body {
 }
 
 #header img{
-  width: 100%;
+  width: 80%;
 }
 
 #chat_container {
@@ -101,10 +101,11 @@ body {
   flex: 1;
 
   color: #dcdcdc;
-  font-size: 15px;
+  font-size: 17px;
 
   max-width: 100%;
   overflow-x: scroll;
+  font-weight: 300;
 
   /*
    * white space refers to any spaces, tabs, or newline characters that are used to format the CSS code
@@ -133,7 +134,7 @@ form {
   display: flex;
   flex-direction: row;
   gap: 10px;
-  margin-bottom: 30px;
+  margin-bottom: 60px;
 }
 
 textarea {
@@ -148,6 +149,11 @@ textarea {
   border: none;
   outline: none;
   resize: none;
+}
+
+textarea::placeholder {
+color: #fff;
+font-weight: 300;
 }
 
 button {

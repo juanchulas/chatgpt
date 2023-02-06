@@ -1,0 +1,12 @@
+{
+  "domain":[
+    {"id": 0, "name":"grupobancolombia", "url": "www.grupobancolombia.com"},
+    {"id": 1, "name":"bancolombia", "url": "www.bancolombia.com"},
+    {"id": 2, "name":"proteccion", "urk": "www.proteccion.com"}
+  ],
+  "question":[
+    {"id": 0, "prompt":"Cuales son los metatags reportados para el dominio "},
+    {"id": 1, "prompt":"Cuál es el whois para el dominio "},
+    {"id": 2, "prompt":"Cuales son las principales 10 categorías en las cuales google tiene catalogado el dominio "}
+  ]
+}
