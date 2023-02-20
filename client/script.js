@@ -382,9 +382,9 @@ form.addEventListener('keyup', (e) => {
 
 async function respuestaPromt (stringoption){
 
-   // const text = stringoption;
+   const text = stringoption;
     console.log(stringoption)
-    const text = "hola como estás";
+   // const text = "hola como estás";
     const uniqueId = generateUniqueId()
     chatContainer.innerHTML += chatStripe(true, " ", uniqueId)
     chatContainer.scrollTop = chatContainer.scrollHeight;
