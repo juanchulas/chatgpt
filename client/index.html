@@ -10,14 +10,25 @@
   <body>
     <div id="app">
       <div id="header"><img src="assets/dc.png"></div>
-      <div id="chat_container"></div>
+      <form>
+        <div class="inline">
+          <label for="process-id">process id:</label>
+          <select id="process-id" name="process-id"></select>
+        </div>
+        <div class="inline">
+          <label for="language">language:</label>
+          <select id="language" name="language"></select>
+        </div>
+        <div id="wildcard"></div>
+        <button type="submit" id="submit" disabled>RUN</button>
+        
+    </form>
 
-      <form id="form">
-        <textarea name="prompt" rows="1" cols="1" placeholder="¿en qué te puedo ayudar?..."></textarea>
-        <button type="submit"><img src="assets/arrow.png" alt="send" />
-      </form>
+      <div id="chat_container">
+        <p class="help" id="help"></p>
+      </div>
     </div>
 
-    <script type="module" src="no-prompt.js"></script>
+    <script type="module" src="script.js"></script>
   </body>
 </html>
