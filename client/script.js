@@ -1,6 +1,6 @@
 import bot from './assets/bot.svg';
 import user from './assets/user.svg';
-import data from './prompt.json' assert {type: 'json'};
+import dataJson from './prompt.json' assert {type: 'json'};
 
 const form = document.querySelector('form');
 const chatContainer = document.querySelector('#chat_container');
@@ -15,47 +15,14 @@ if(urlParams.get("processid")){
 
 if(urlParams.get("lang")){
     var lang = urlParams.get("lang").toLowerCase(); //question
-}else{
+}else if(urlParams.get("Lang")){
     var lang = urlParams.get("Lang").toLowerCase(); //question
 }
 
-var prompt = 
-    {
-        "process":
-            [
-                {
-                "processid":"ADR-01-D01-1", "name": "Brainstorm", "languaje":
-                    [
-                        {"id": "es", "prompt": "asuma que es un experto en medios digitales y requiere generar al menos 5 ideas de campañas de medios digitales para la industria de [%INDUSTRY%] y con el objetivo de [%CAMPAIGN_OBJECTIVE%]"},
-                        {"id": "en", "prompt": "assume you are a digital media expert and need to generate at least 5 digital media campaign ideas for industry of [%INDUSTRY%] and aiming for [%CAMPAIGN_OBJECTIVE%]"},
-                        {"id": "pt", "prompt": "suponha que você seja um especialista em mídia digital e precise gerar pelo menos 5 ideias de campanha de mídia digital para a indústria de [%INDUSTRY%] e visando [%CAMPAIGN_OBJECTIVE%]"}
 
-                    ]
-                },
-                {
-                "processid":"AUO-01-D01-1", "name": "DMP Variables", "languaje":
-                        [
-                            {"id": "es", "prompt": "Cuáles son las 10 principales atributos en un DMP que deben ser considerados para una audiencia interesada en [%PRODUCT%] . En la lista debe estar el atributo seguido de la explicación."},
-                            {"id": "en", "prompt": "What are the top 10 attributes in a DMP that should be considered for an audience interested in [%PRODUCT%] . In the list must be the attribute followed by the explanation."},
-                            {"id": "pt", "prompt": "Quais são os 10 principais atributos em um DMP que devem ser considerados para um público interessado em [%PRODUCT%] . Na lista deve estar o atributo seguido da explicação."}
-                        ]
-                },
-                {
-                "processid":"BSR-01-D01", "name": "SEO Sheets - Keywords", "languaje":
-                        [
-                            {"id": "es", "prompt": "Asuma que es un experto en Search ads de Google para la empresa [%NAME%] . Cree una lista de las 20 palabras claves Long-Tail Keyword’ que contenga la marca '[%NAME%]' con la siguiente distribución (10 con search intent transaccional , 5 con search intent comercial y 5 con search intent informativa ). El formato de la lista es iniciando la línea con la palabra clave y luego posterior a cada palabra clave agregar siempre el símbolo ':' y luego agregar el ‘Search Intent’ para la intención de búsqueda de la palabra clave (comercial, transaccional o informativa)"},
-                            {"id": "en", "prompt": "Assume that you are an expert in keyword analysis for Google Search ads campaign optimization and you are going to create a keyword list for the company [%NAME%] . With this information, create a list of the 35 Long-Tail Keyword' keywords that contain the word '[%CATEGORY%]' with the following distribution (15 with transactional search intent, 10 with commercial search intent and 10 with informational search intent) with the format starting the line with number in the following format 1: and then in front of each keyword add always the symbol ':' and then add the 'Search Intent' for the human search intent of the keyword (commercial, transactional or informational )"},
-                            {"id": "pt", "prompt": "Suponha que você seja um especialista em anúncios de pesquisa do Google para a empresa [%NAME%] . Crie uma lista das 20 palavras-chave de cauda longa contendo a tag '[%NAME%]' com a seguinte distribuição (10 com pesquisa transacional intenção, 5 com intenção de busca comercial e 5 com intenção de busca informativa) O formato da lista é iniciar a linha com a palavra-chave e depois de cada palavra-chave sempre adicionar o símbolo ':' e depois adicionar o 'Search Intent' para a intenção de pesquisa da palavra-chave (comercial, transacional ou informativa)."}
-                        ]
-                    },                    
-            ],
-        "languages":
-            [
-                {"name": "ES", "copy": "Ingresa todas las variables a ejecutar para finalzar el prompt:"},
-                {"name": "EN", "copy": "Enter all the variables to execute to finish the prompt:"},
-                {"name": "PT", "copy":"Insira todas as variáveis ​​a serem executadas para finalizar o prompt:"}
-            ]
-    }
+console.log(dataJson);
+
+var prompt = dataJson;
 
 
 // diable submit
@@ -307,9 +274,6 @@ function typeText(element, text) {
     }, 10)
 }
 
-// generate unique ID for each message div of bot
-// necessary for typing text effect for that specific reply
-// without unique ID, typing text will work on every element
 function generateUniqueId() {
     const timestamp = Date.now();
     const randomNumber = Math.random();
@@ -393,6 +357,7 @@ async function respuestaPromt (stringoption){
 
 
     const response = await fetch('https://dentsu-ai.onrender.com', {
+    //const response = await fetch('http://localhost:3000', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',

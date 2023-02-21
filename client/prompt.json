@@ -1,12 +1,1170 @@
 {
-  "domain":[
-    {"id": 0, "name":"grupobancolombia", "url": "www.grupobancolombia.com"},
-    {"id": 1, "name":"bancolombia", "url": "www.bancolombia.com"},
-    {"id": 2, "name":"proteccion", "urk": "www.proteccion.com"}
-  ],
-  "question":[
-    {"id": 0, "prompt":"Cuales son los metatags reportados para el dominio "},
-    {"id": 1, "prompt":"Cuál es el whois para el dominio "},
-    {"id": 2, "prompt":"Cuales son las principales 10 categorías en las cuales google tiene catalogado el dominio "}
-  ]
-}
+    "process": [
+      {
+        "processid": "ADR-01-D01-1",
+        "name": "Brainstorm",
+        "languaje": [
+          {
+            "id": "es",
+            "prompt": "asuma que es un experto en medios digitales y requiere generar al menos 5 ideas de campañas de medios digitales para la industria de [%INDUSTRY%] y con el objetivo de [%CAMPAIGN_OBJECTIVE%]"
+          },
+          {
+            "id": "en",
+            "prompt": "assume you are a digital media expert and need to generate at least 5 digital media campaign ideas for industry of [%INDUSTRY%] and aiming for [%CAMPAIGN_OBJECTIVE%]"
+          },
+          {
+            "id": "pt",
+            "prompt": "suponha que você seja um especialista em mídia digital e precise gerar pelo menos 5 ideias de campanha de mídia digital para a indústria de [%INDUSTRY%] e visando [%CAMPAIGN_OBJECTIVE%] (A resposta deve ser no idioma portugués)"
+          }
+        ]
+      },
+      {
+        "processid": "AUO-01-D01-1",
+        "name": "DMP Variables",
+        "languaje": [
+          {
+            "id": "es",
+            "prompt": "Cuáles son las 10 principales atributos en un DMP que deben ser considerados para una audiencia interesada en [%PRODUCT%] . En la lista debe estar el atributo seguido de la explicación."
+          },
+          {
+            "id": "en",
+            "prompt": "What are the top 10 attributes in a DMP that should be considered for an audience interested in [%PRODUCT%] . In the list must be the attribute followed by the explanation."
+          },
+          {
+            "id": "pt",
+            "prompt": "Quais são os 10 principais atributos em um DMP que devem ser considerados para um público interessado em [%PRODUCT%] . Na lista deve estar o atributo seguido da explicação.(A resposta deve ser no idioma portugués)"
+          }
+        ]
+      },
+      {
+        "processid": "BSR-01-D01-1",
+        "name": "SEO Sheets - Keywords-category",
+        "languaje": [
+          {
+            "id": "es",
+            "prompt": "Asuma que es un experto en Search ads de Google para la empresa [%COMPANY%] . Cree una lista de las 20 palabras claves Long-Tail Keyword’ que ralacionado con la industria de '[%INDUSTRY%]' y la marca [%COMPANY%] con la siguiente distribución (10 con search intent transaccional , 5 con search intent comercial y 5 con search intent informativa ) \n El formato de la lista es iniciando la línea con la palabra clave y luego posterior a cada palabra clave agregar siempre el símbolo ':' y luego agregar el ‘Search Intent’ para la intención de búsqueda de la palabra clave (comercial, transaccional o informativa). no se debe numerar cada línea"
+          },
+          {
+            "id": "en",
+            "prompt": "Assume that you are an expert in keyword analysis for Google Search ads campaign optimization and you are going to create a keyword list for the sector [%INDUSTRY%] . With this information, create a list of the 35 Long-Tail Keyword' keywords that relate to category '[%CATEGORY%]' and company [%COMPANY%] with the following distribution (15 with transactional search intent, 10 with commercial search intent and 10 with informational search intent) with the format starting the line with number in the following format 1: and then in front of each keyword add always the symbol ':' and then add the 'Search Intent' for the human search intent of the keyword (commercial, transactional or informational ) you should not number each line"
+          },
+          {
+            "id": "pt",
+            "prompt": "Suponha que você seja um especialista em anúncios de pesquisa do Google para a empresa [%COMPANY%] . Crie uma lista das 20 palavras-chave de cauda longa relacionado com a industria '[%INDUSTRY%]' e a empresa [%COMPANY%] com a seguinte distribuição (10 com pesquisa transacional intenção, 5 com intenção de busca comercial e 5 com intenção de busca informativa)\n O formato da lista é iniciar a linha com a palavra-chave e depois de cada palavra-chave sempre adicionar o símbolo ':' e depois adicionar o 'Search Intent' para a intenção de pesquisa da palavra-chave (comercial, transacional ou informativa). você não deve numerar cada linha (A resposta deve ser no idioma portugués)"
+          }
+        ]
+      },
+      {
+        "processid": "BSR-01-D02-1",
+        "name": "SEO Sheets - Keywords-Industry",
+        "languaje": [
+          {
+            "id": "es",
+            "prompt": "Asuma que es un experto en Search ads de Google . Cree una lista de las 20 palabras claves Long-Tail Keyword’ que sean relevantes para la industria '[%INDUSTRY%]' con la siguiente distribución (10 con search intent transaccional , 5 con search intent comercial y 5 con search intent informativa ) \n El formato de la lista es iniciando la línea con la palabra clave y luego posterior a cada palabra clave agregar siempre el símbolo ':' y luego agregar el ‘Search Intent’ para la intención de búsqueda de la palabra clave (comercial, transaccional o informativa).\n no se debe numerar cada línea"
+          },
+          {
+            "id": "en",
+            "prompt": "Assume that you are an expert in keyword analysis for Google Search ads campaign optimization and you are going to create a keyword list . With this information, create a list of the 35 Long-Tail Keyword' keywords relevant for the industry '[%INDUSTRY%]' with the following distribution (15 with transactional search intent, 10 with commercial search intent and 10 with informational search intent) with the format starting the line with number in the following format 1: and then in front of each keyword add always the symbol ':' and then add the 'Search Intent' for the human search intent of the keyword (commercial, transactional or informational ) you should not number each line"
+          },
+          {
+            "id": "pt",
+            "prompt": "Suponha que você seja um especialista em anúncios de pesquisa do Google. Crie uma lista das 20 palavras-chave de cauda longa relevantes para o setor '[%INDUSTRY%]' com a seguinte distribuição (10 com intenção de pesquisa transacional , 5 com intenção de pesquisa comercial e 5 com intenção de busca informativa) \n O formato da lista é iniciar a linha com a palavra-chave e depois de cada palavra-chave sempre adicionar o símbolo ':' e depois adicionar o 'Search Intent' para a intenção de pesquisa da palavra-chave (comercial, transacional ou informativa).você não deve numerar cada linha (A resposta deve ser no idioma portugués)"
+          }
+        ]
+      },
+      {
+        "processid": "CJR-05-D01-3",
+        "name": "Email Subjects",
+        "languaje": [
+          {
+            "id": "es",
+            "prompt": "asuma que es un experto en email para una empresa de publicidad. Debe generar una lista de 5 subjects para el email que va enviar para una empresa de [%CATEGORY%] y el email tiene el objetivo de [%EMAIL_OBJECTIVE%]."
+          },
+          {
+            "id": "en",
+            "prompt": "assume you are an email expert for an advertising company. You must generate a list of 5 subjects for the email you are going to send to a company of [%CATEGORY%] and the email has the objective of [%EMAIL_OBJECTIVE%]."
+          },
+          {
+            "id": "pt",
+            "prompt": "suponha que você seja um especialista em e-mail de uma empresa de publicidade. Você deve gerar uma lista de 5 assuntos para o e-mail que vai enviar para uma empresa de [%CATEGORY%] e o e-mail tem o objetivo de [%EMAIL_OBJECTIVE%].(A resposta deve ser no idioma portugués)"
+          }
+        ]
+      },
+      {
+        "processid": "COO-03-D01-1",
+        "name": "Product description",
+        "languaje": [
+          {
+            "id": "es",
+            "prompt": "asuma que es un experto en contenidos de comercio electrónico y necesita mejorar la descripción del producto de la siguiente url: \n [%PRODUCT_URL%]"
+          },
+          {
+            "id": "en",
+            "prompt": "assume you are an ecommerce content expert and need to improve the product description of the following url: \n [%PRODUCT_URL%]"
+          },
+          {
+            "id": "pt",
+            "prompt": "suponha que você seja um especialista em conteúdo de comércio eletrônico e precise melhorar a descrição do produto da seguinte url: \n [%PRODUCT_URL%] (A resposta deve ser no idioma portugués)"
+          }
+        ]
+      },
+      {
+        "processid": "COO-03-D01-2",
+        "name": "Product Q&A",
+        "languaje": [
+          {
+            "id": "es",
+            "prompt": "Cuáles pueden ser 10 preguntas que tenga un cliente acerca del siguiente producto: [%PRODUCT_URL%]"
+          },
+          {
+            "id": "en",
+            "prompt": "What can be 10 questions that a customer has about the following product: [%PRODUCT_URL%]"
+          },
+          {
+            "id": "pt",
+            "prompt": "Quais podem ser 10 perguntas que um cliente tem sobre o seguinte produto: [%PRODUCT_URL%] (A resposta deve ser no idioma portugués)"
+          }
+        ]
+      },
+      {
+        "processid": "COO-03-D01-3",
+        "name": "Motivation to buy product",
+        "languaje": [
+          {
+            "id": "es",
+            "prompt": "Cuáles pueden ser 10 razones que tiene una persona para comprar el producto : [%PRODUCT_URL%]"
+          },
+          {
+            "id": "en",
+            "prompt": "What can be 10 reasons that a person has to buy the product: [%PRODUCT_URL%]"
+          },
+          {
+            "id": "pt",
+            "prompt": "Quais podem ser os 10 motivos que uma pessoa tem para comprar o produto: [%PRODUCT_URL%] (A resposta deve ser no idioma portugués)"
+          }
+        ]
+      },
+      {
+        "processid": "CPO-01-D01-1",
+        "name": "SEO Sheets - Keywords",
+        "languaje": [
+          {
+            "id": "es",
+            "prompt": "Asuma que es un experto en SEO . cree un contenido relevante s demáximo 300 caracteres que refleje el contenido de la página [%PAGE_URL%]"
+          },
+          {
+            "id": "en",
+            "prompt": "Assume you are an SEO expert. create relevant content of max 300 characters that reflects the content of the page [%PAGE_URL%]"
+          },
+          {
+            "id": "pt",
+            "prompt": "Suponha que você seja um especialista em SEO. crie conteúdo relevante de no máximo 300 caracteres que reflita o conteúdo da página [%PAGE_URL%] (A resposta deve ser no idioma portugués)"
+          }
+        ]
+      },
+      {
+        "processid": "CPO-01-D01-2",
+        "name": "SEO Sheets - Keywords",
+        "languaje": [
+          {
+            "id": "es",
+            "prompt": "Asuma que es un experto en SEO . cree un contenido relevante s demáximo 600 caracteres que refleje el contenido de la página [%PAGE_URL%]"
+          },
+          {
+            "id": "en",
+            "prompt": "Assume you are an SEO expert. create relevant content of max 600 characters that reflects the content of the page [%PAGE_URL%]"
+          },
+          {
+            "id": "pt",
+            "prompt": "Suponha que você seja um especialista em SEO. crie conteúdo relevante de no máximo 600 caracteres que reflita o conteúdo da página [%PAGE_URL%] (A resposta deve ser no idioma portugués)"
+          }
+        ]
+      },
+      {
+        "processid": "CPO-01-D01-3",
+        "name": "SEO Sheets - Keywords",
+        "languaje": [
+          {
+            "id": "es",
+            "prompt": "Asuma que es un experto en SEO . cree un contenido relevante s demáximo 1000 caracteres que refleje el contenido de la página [%PAGE_URL%]"
+          },
+          {
+            "id": "en",
+            "prompt": "Assume you are an SEO expert. create relevant content of max 1000 characters that reflects the content of the page [%PAGE_URL%]"
+          },
+          {
+            "id": "pt",
+            "prompt": "Suponha que você seja um especialista em SEO. crie conteúdo relevante de no máximo 1000 caracteres que reflita o conteúdo da página [%PAGE_URL%] (A resposta deve ser no idioma portugués)"
+          }
+        ]
+      },
+      {
+        "processid": "CPO-01-D02-1",
+        "name": "SEO Sheets - Keywords",
+        "languaje": [
+          {
+            "id": "es",
+            "prompt": "Cómo podemos mejorar el siguiente texto para el sitio de [%DOMAIN%]. Texto a mejorar: [%CONTENT_TO_IMPROVE%]"
+          },
+          {
+            "id": "en",
+            "prompt": "How we can improve the following text for the site [%DOMAIN%]. Text to improve: [%CONTENT_TO_IMPROVE%]"
+          },
+          {
+            "id": "pt",
+            "prompt": "Como podemos melhorar o seguinte texto para o site [%DOMAIN%].Texto a melhorar: [%CONTENT_TO_IMPROVE%] (A resposta deve ser no idioma portugués)"
+          }
+        ]
+      },
+      {
+        "processid": "CPO-02-D01-1",
+        "name": "Hashtags",
+        "languaje": [
+          {
+            "id": "es",
+            "prompt": "Asuma que es un experto en redes sociales y necesita definir los mejores hashtag para acompañar una publicación en [%SOCIAL_CHANNEL%] . Sacar una lista de al menos 10 hashtags relevantes para la siguiente publicación en [%SOCIAL_CHANNEL%]. \n [%POST_CONTENT%]"
+          },
+          {
+            "id": "en",
+            "prompt": "Assume you are a social media expert and need to define the best hashtags to accompany a post on [%SOCIAL_CHANNEL%] . Pull up a list of at least 10 relevant hashtags for the next post on [%SOCIAL_CHANNEL%]. \n [%POST_CONTENT%]"
+          },
+          {
+            "id": "pt",
+            "prompt": "Suponha que você seja um especialista em mídia social e precise definir as melhores hashtags para acompanhar uma postagem no [%SOCIAL_CHANNEL%] . Puxe uma lista de pelo menos 10 hashtags relevantes para a próxima postagem em [%SOCIAL_CHANNEL%]. \n [%POST_CONTENT%] (A resposta deve ser no idioma portugués)"
+          }
+        ]
+      },
+      {
+        "processid": "CPO-02-D01-2",
+        "name": "caption for Instagram",
+        "languaje": [
+          {
+            "id": "es",
+            "prompt": "asuma que es un community manager para una empresa de [%INDUSTRY%] , escriba un caption para instagram sobre : [%TOPIC%]"
+          },
+          {
+            "id": "en",
+            "prompt": "Assume you are a community manager for a [%INDUSTRY%] company, write a caption for instagram about: [%TOPIC%]"
+          },
+          {
+            "id": "pt",
+            "prompt": "Suponha que você seja gerente de comunidade de uma empresa [%INDUSTRY%], escreva uma legenda para o instagram sobre: [%TOPIC%] (A resposta deve ser no idioma portugués)"
+          }
+        ]
+      },
+      {
+        "processid": "CPO-02-D01-3",
+        "name": "Youtube video Intro",
+        "languaje": [
+          {
+            "id": "es",
+            "prompt": "asuma que es un community manager para una empresa de [%CATEGORY%] , escriba un video intro para youtube sobre : \n [%TOPIC%]"
+          },
+          {
+            "id": "en",
+            "prompt": "assume you are a community manager for a [%CATEGORY%] company, write an intro video for youtube about : \n [%TOPIC%]"
+          },
+          {
+            "id": "pt",
+            "prompt": "suponha que você seja um gerente de comunidade de uma empresa [%CATEGORY%], escreva um vídeo de introdução para o youtube sobre: \n [%TEMA%] (A resposta deve ser no idioma portugués)"
+          }
+        ]
+      },
+      {
+        "processid": "CPO-04-D01-1",
+        "name": "Domain Info-WHOIS",
+        "languaje": [
+          {
+            "id": "es",
+            "prompt": "Cuál es el whois para el dominio [%DOMAIN%] ?"
+          },
+          {
+            "id": "en",
+            "prompt": "what is whois for domain [%DOMAIN%] ?"
+          },
+          {
+            "id": "pt",
+            "prompt": "Qual é o whois do domínio [%DOMAIN%]? (A resposta deve ser no idioma portugués)"
+          }
+        ]
+      },
+      {
+        "processid": "CPO-04-D02-1",
+        "name": "Guideline Improve CPRscore",
+        "languaje": [
+          {
+            "id": "es",
+            "prompt": "Asuma que es un experto en indexación de sitios web para google y tiene el siguiente reto: \n Encontrar 10 cosas específicas para mejorar el CPRscore de [%DOMAIN%]?"
+          },
+          {
+            "id": "en",
+            "prompt": "Assume you are an expert in website indexing for google and you have the following challenge: \n Find 10 specific things to improve [%DOMAIN%]'s CPRscore?"
+          },
+          {
+            "id": "pt",
+            "prompt": "Suponha que você seja um especialista em indexação de sites para o google e tenha o seguinte desafio: \n Encontre 10 coisas específicas para melhorar CPRscore de [%DOMAIN%]? (A resposta deve ser no idioma portugués)"
+          }
+        ]
+      },
+      {
+        "processid": "CPO-04-D02-2",
+        "name": "Guideline Improve CPRscore",
+        "languaje": [
+          {
+            "id": "es",
+            "prompt": "Asuma que es un experto en indexación de sitios web para google y tiene el siguiente reto: \n Encontrar 10 cosas específicas para mejorar el Pagerank de [%DOMAIN%]?"
+          },
+          {
+            "id": "en",
+            "prompt": "Assume you are an expert in website indexing for google and you have the following challenge: \n Find 10 specific things to improve [%DOMAIN%]'s Pagerank?"
+          },
+          {
+            "id": "pt",
+            "prompt": "Suponha que você seja um especialista em indexação de sites para o google e tenha o seguinte desafio: \n Encontre 10 coisas específicas para melhorar Pagerank de [%DOMAIN%]? (A resposta deve ser no idioma portugués)"
+          }
+        ]
+      },
+      {
+        "processid": "CPO-04-D02-3",
+        "name": "Crawlability Scores",
+        "languaje": [
+          {
+            "id": "es",
+            "prompt": "Asuma que es un experto en indexación de sitios en motores de búsqueda y necesita encontrar respuesta a las siguientes preguntas: \n 1. cual es domain authority de [%DOMAIN%]?  \n 2. cual es el page authority del home de [%DOMAIN%]? \n 3. cuál es el spam score de [%DOMAIN%]? \n 4. cuántos extenal backlinks tiene [%DOMAIN%]? \n 5. cómo es el PR Score del sitio [%DOMAIN%]? \n 6. cuántos URL tiene indexado [%DOMAIN%]? \n 7. existe alguna alerta de Crawled Flag para [%DOMAIN%]?"
+          },
+          {
+            "id": "en",
+            "prompt": "Assume that you are an expert in search engine indexing of sites and need to find answers to the following questions: \n 1. What is the domain authority of [%DOMAIN%]? \n 2. What is the page authority of the home of [%DOMAIN%]? \n 3. what is the spam score of [%DOMAIN%]? \n 4. How many external backlinks does [%DOMAIN%] have? \n 5. How is the PR Score of the site [%DOMAIN%]? \n 6. How many URLs does [%DOMAIN%] have indexed? \n7. Is there a Crawled Flag alert for [%DOMAIN%]?"
+          },
+          {
+            "id": "pt",
+            "prompt": "Suponha que você seja um especialista em indexação de sites em mecanismos de pesquisa e precise encontrar respostas para as seguintes perguntas: \n 1. Qual é domain authority de [%DOMAIN%]? \n 2. Qual é page authority de [%DOMAIN%]? \n 3. qual é o spam score de [%DOMAIN%]? \n 4. Quantos backlinks externos [%DOMAIN%] tem? \n 5. Como está o PR Score do site [%DOMAIN%]? \n 6. Quantas URLs [%DOMAIN%] indexou? \n 7. Existe um alerta de sinalizador rastreado para [%DOMAIN%]? (A resposta deve ser no idioma portugués)"
+          }
+        ]
+      },
+      {
+        "processid": "CPO-04-D04-1",
+        "name": "SEO Sheets - Categories",
+        "languaje": [
+          {
+            "id": "es",
+            "prompt": "Crear una lista de 15 nombres de categorías que agrupan palabras claves importantes para pagar en google para [%COMPANY%] y organizar la lista de mayor a menor relevancia incluyendo número de línea al princpio de cada línea siguiente el siguiente ejemplo 1:, luego al frente de cada nombre de categoría agregue : y luego la explicación del contenido de la categoría"
+          },
+          {
+            "id": "en",
+            "prompt": "Create a list of 15 category names that group important keywords to pay in google for [%COMPANY%] and organize the list from most to least relevant including line number at the beginning of each line following the example 1:, then in front of each category name add : and then the explanation of the category content"
+          },
+          {
+            "id": "pt",
+            "prompt": "Crie uma lista de 15 nomes de categorias que agrupe palavras-chave importantes para pagar no google por [%COMPANY%] e organize a lista da mais para a menos relevante incluindo o número da linha no início de cada linha seguindo o seguinte exemplo 1:, depois para o in na frente de cada nome de categoria, adicione: e, em seguida, a explicação do conteúdo da categoria. (A resposta deve ser no idioma portugués)"
+          }
+        ]
+      },
+      {
+        "processid": "CPO-04-D04-2",
+        "name": "SEO Sheets - Keywords",
+        "languaje": [
+          {
+            "id": "es",
+            "prompt": "Asuma que es un experto en Search ads de Google para la empresa [%COMPANY_NAME%] . Cree una lista de las 20 palabras claves Long-Tail Keyword’ que contenga la palabra '[%CATEGORY%]' con la siguiente distribución (10 con search intent transaccional , 5 con search intent comercial y 5 con search intent informativa ) \n El formato de la lista es iniciando la línea con la palabra clave y luego posterior a cada palabra clave agregar siempre el símbolo ':' y luego agregar el ‘Search Intent’ para la intención de búsqueda de la palabra clave (comercial, transaccional o informativa)."
+          },
+          {
+            "id": "en",
+            "prompt": "Assume that you are an expert in keyword analysis for Google Search ads campaign optimization and you are going to create a keyword list for the company [%COMPANY_NAME%] . With this information, create a list of the 35 Long-Tail Keyword' keywords that contain the word '[%CATEGORY%]' with the following distribution (15 with transactional search intent, 10 with commercial search intent and 10 with informational search intent) with the format starting the line with number in the following format 1: and then in front of each keyword add always the symbol ':' and then add the 'Search Intent' for the human search intent of the keyword (commercial, transactional or informational )"
+          },
+          {
+            "id": "pt",
+            "prompt": "Suponha que você seja um especialista em anúncios de pesquisa do Google para a empresa [%COMPANY_NAME%]. Crie uma lista de 20 palavras-chave de cauda longa contendo a palavra '[%CATEGORY%]' com a seguinte distribuição (10 com intenção de pesquisa transacional, 5 com intenção de busca comercial e 5 com intenção de busca informativa) \n O formato da lista é iniciar a linha com a palavra-chave e depois de cada palavra-chave sempre adicionar o símbolo ':' e depois adicionar o 'Search Intent' para a intenção de pesquisa da palavra-chave (comercial, transacional ou informativa). (A resposta deve ser no idioma portugués)"
+          }
+        ]
+      },
+      {
+        "processid": "CRR-04-D01-1",
+        "name": "Creative Ideas",
+        "languaje": [
+          {
+            "id": "es",
+            "prompt": "Asuma que es un creativo de una agencia de publicidad y cree 5 ideas creativas para una empresa en la industria de [%INDUSTRY%] y que necesita lograr [%CAMPAIGN_OBJECTIVE%]."
+          },
+          {
+            "id": "en",
+            "prompt": "Assume you are a creative from an ad agency and come up with 5 creative ideas for a company in the [%INDUSTRY%] industry that needs to achieve [%CAMPAIGN_OBJECTIVE%]."
+          },
+          {
+            "id": "pt",
+            "prompt": "Suponha que você seja um criativo de uma agência de publicidade e tenha 5 ideias criativas para uma empresa do setor [%INDUSTRY%] que precisa atingir [%CAMPAIGN_OBJECTIVE%]. (A resposta deve ser no idioma portugués)"
+          }
+        ]
+      },
+      {
+        "processid": "CXR-04-D01-2",
+        "name": "Journey Restrictions",
+        "languaje": [
+          {
+            "id": "es",
+            "prompt": "Asuma que es un experto en análisis de experiencia de usuario y necesita responder las siguiente preguntas: \n 1. ¿Cuáles son las 5 primeras cosas que piensa una persona en el momento de necesitar adquirir una [%PRODUCT_NAME%]? La respuesta debe estar en un formato de lista numerada y antes de empezar la lista agregar la frase 5 Cosas que piensa una persona al adquirir [%PRODUCT_NAME%] \n 2. ¿Cuáles son las 5 barreras que una personas puede encontrar para adquirir [%PRODUCT_NAME%]?La respuesta debe estar en un formato de lista numerada y antes de empezar la lista agregar la frase 5 barreras adquirir [%PRODUCT_NAME%]"
+          },
+          {
+            "id": "en",
+            "prompt": "Assume that you are an expert in user experience analysis and need to answer the following questions: \n 1. What are the first 5 things a person thinks of when they need to purchase [%PRODUCT_NAME%]? The answer must be in a numbered list format and before starting the list add the phrase 5 Things a person thinks when acquiring [%PRODUCT_NAME%] \n 2. What are the 5 barriers that a person can find to acquire [%PRODUCT_NAME%]? The answer must be in a numbered list format and before starting the list add the phrase 5 barriers to acquire [%PRODUCT_NAME%]"
+          },
+          {
+            "id": "pt",
+            "prompt": "Suponha que você seja um especialista em análise de experiência do usuário e precise responder às seguintes perguntas: \n 1. Quais são as 5 primeiras coisas em que uma pessoa pensa quando precisa comprar o [%PRODUCT_NAME%]? A resposta deve estar em formato de lista numerada e antes de iniciar a lista adicione a frase 5 Coisas que uma pessoa pensa ao comprar [%PRODUCT_NAME%] \n 2. Quais são as 5 barreiras que uma pessoa pode encontrar para adquirir [%PRODUCT_NAME%]? A resposta deve estar em formato de lista numerada e antes de iniciar a lista adicione a frase 5 barreiras para adquirir [%PRODUCT_NAME%] (A resposta deve ser no idioma portugués)"
+          }
+        ]
+      },
+      {
+        "processid": "CXR-04-D01-3",
+        "name": "Create Buyer Persona",
+        "languaje": [
+          {
+            "id": "es",
+            "prompt": "Asuma que es un experto en experiencia de usuario y necesita definir los buyer personas para un [%INDUSTRY%]. Defina los 5 buyer personas y en cada uno explique los siguientes módulos: comportamiento digital , intereses y demografía. En el formato de presentación a cada buyer persona asigne un descriptivo y anteceda cada explicación con el nombre del módulo y cada módulo mostrarlo en una nueva línea."
+          },
+          {
+            "id": "en",
+            "prompt": "Assume you are a user experience expert and you need to define buyer personas for a [%INDUSTRY%]. Define the 5 buyer personas and in each one explain the following modules: digital behavior, interests and demographics. In the presentation format, assign a description to each buyer persona and precede each explanation with the name of the module and each module will display it on a new line."
+          },
+          {
+            "id": "pt",
+            "prompt": "Suponha que você seja um especialista em experiência do usuário e precise definir buyer personas para [%INDUSTRY%]. Defina as 5 buyer personas e em cada uma explique os seguintes módulos: comportamento digital, interesses e demografia. No formato de apresentação, atribua uma descrição a cada buyer persona e preceda cada explicação com o nome do módulo e cada módulo o exibirá em uma nova linha. (A resposta deve ser no idioma portugués)"
+          }
+        ]
+      },
+      {
+        "processid": "CXR-04-D01-4",
+        "name": "Buyer Persona Pains & channels",
+        "languaje": [
+          {
+            "id": "es",
+            "prompt": "Asuma que es un experto en experiencia de usuario y necesita definir los dolores de un buyer personas para un [%INDUSTRY%]. Cree una lista de 10 dolores y 5 canales por los cuales interactuar que puede tener el siguiente buyer persona: \n [%BUYER_PERSONA_DESC%]"
+          },
+          {
+            "id": "en",
+            "prompt": "Assume you are a user experience expert and need to define the pains of a buyer persona for a [%INDUSTRY%]. Create a list of 10 pains and 5 channels through which to interact that the following buyer persona may have: \n [%BUYER_PERSONA_DESC%]"
+          },
+          {
+            "id": "pt",
+            "prompt": "Suponha que você seja um especialista em experiência do usuário e precise definir as dores de uma buyer persona para [%INDUSTRY%]. Crie uma lista de 10 dores e 5 canais de interação que a seguinte buyer persona pode ter: \n [%BUYER_PERSONA_DESC%] (A resposta deve ser no idioma portugués)"
+          }
+        ]
+      },
+      {
+        "processid": "CXR-04-D01-5",
+        "name": "Keywords for Buyer persona",
+        "languaje": [
+          {
+            "id": "es",
+            "prompt": "Asuma que es un experto en experiencia de usuario y necesita definir las palabras claves que este buyer persona utiliza para buscar un producto o servicio de un [%INDUSTRY%]. Cree una lista de 20 palabras claves para el siguiente buyer persona: \n [%BUYER_PERSONA_DESC%]"
+          },
+          {
+            "id": "en",
+            "prompt": "Assume you are a user experience expert and you need to define the keywords that this buyer persona uses to search for a product or service from a [%INDUSTRY%]. Create a list of 20 keywords for the following buyer persona: \n [%BUYER_PERSONA_DESC%]"
+          },
+          {
+            "id": "pt",
+            "prompt": "Suponha que você seja um especialista em experiência do usuário e precise definir as palavras-chave que essa persona do comprador usa para pesquisar um produto ou serviço de [%INDUSTRY%]. Crie uma lista de 20 palavras-chave para a seguinte persona do comprador: \n [%BUYER_PERSONA_DESC%] (A resposta deve ser no idioma portugués)"
+          }
+        ]
+      },
+      {
+        "processid": "CXR-04-D01-6",
+        "name": "Verbs related to Brand",
+        "languaje": [
+          {
+            "id": "es",
+            "prompt": "cuales son los 20 verbos que acompañan la palabra [%COMPANY_NAME%] que se usan más frecuentemente en contenidos digitales y sociales?"
+          },
+          {
+            "id": "en",
+            "prompt": "What are the 20 verbs that accompany the word [%COMPANY_NAME%] that are used most frequently in digital and social content?"
+          },
+          {
+            "id": "pt",
+            "prompt": "Quais são os 20 verbos que acompanham a palavra [%COMPANY_NAME%] que são usados com mais frequência em conteúdo digital e social? (A resposta deve ser no idioma portugués)"
+          }
+        ]
+      },
+      {
+        "processid": "MER-02-D01-1",
+        "name": "Comm Media Strategy",
+        "languaje": [
+          {
+            "id": "es",
+            "prompt": "asuma que es un experto en medios y cree una estrategia de comunicaciones de medios para la industria de [%INDUSTRY%]."
+          },
+          {
+            "id": "en",
+            "prompt": "assume you are a media expert and create a media communications strategy for the [%INDUSTRY%] industry."
+          },
+          {
+            "id": "pt",
+            "prompt": "suponha que você seja um especialista em mídia e crie uma estratégia de comunicação de mídia para a indústria [%INDUSTRY%]. (A resposta deve ser no idioma portugués)"
+          }
+        ]
+      },
+      {
+        "processid": "BSR-01-D03-1",
+        "name": "SEO Sheets - Keywords",
+        "languaje": [
+          {
+            "id": "es",
+            "prompt": "Asuma que es un experto en Search ads de Google . Cree una lista de las 20 palabras claves Long-Tail Keyword’ que sean relevantes para la categoría '[%CATEGORY%]' con la siguiente distribución (10 con search intent transaccional , 5 con search intent comercial y 5 con search intent informativa ) \n El formato de la lista es iniciando la línea con la palabra clave y luego posterior a cada palabra clave agregar siempre el símbolo ':' y luego agregar el ‘Search Intent’ para la intención de búsqueda de la palabra clave (comercial, transaccional o informativa). no se debe numerar cada línea"
+          },
+          {
+            "id": "en",
+            "prompt": "Assume that you are an expert in keyword analysis for Google Search ads campaign optimization and you are going to create a keyword list . With this information, create a list of the 35 Long-Tail Keyword' keywords relevant for the category '[%CATEGORY%]' with the following distribution (15 with transactional search intent, 10 with commercial search intent and 10 with informational search intent) with the format starting the line with number in the following format 1: and then in front of each keyword add always the symbol ':' and then add the 'Search Intent' for the human search intent of the keyword (commercial, transactional or informational ) you should not number each line"
+          },
+          {
+            "id": "pt",
+            "prompt": "Suponha que você seja um especialista em anúncios de pesquisa do Google. Crie uma lista das 20 palavras-chave de cauda longa relevantes para a categoria '[%CATEGORY%]' com a seguinte distribuição (10 com intenção de pesquisa transacional , 5 com intenção de pesquisa comercial e 5 com intenção de busca informativa) \n O formato da lista é iniciar a linha com a palavra-chave e depois de cada palavra-chave sempre adicionar o símbolo ':' e depois adicionar o 'Search Intent' para a intenção de pesquisa da palavra-chave (comercial, transacional ou informativa). você não deve numerar cada linha(A resposta deve ser no idioma portugués)"
+          }
+        ]
+      },
+      {
+        "processid": "BSR-06-D01-1",
+        "name": "Bench Growth",
+        "languaje": [
+          {
+            "id": "es",
+            "prompt": "Favor crear un contexto de la información de la empresa [%COMPANY%] , la respuesta debe incluir el crecimiento en los últimos años, las categorías de negocios y sus principales productos y servicios."
+          },
+          {
+            "id": "en",
+            "prompt": "Please create a context of the company information [%COMPANY%] , the answer must include the growth in recent years, the business categories and its main products and services."
+          },
+          {
+            "id": "pt",
+            "prompt": "Crie um contexto das informações da empresa [%COMPANY%], a resposta deve incluir o crescimento nos últimos anos, as categorias de negócios e seus principais produtos e serviços."
+          }
+        ]
+      },
+      {
+        "processid": "BSR-06-D01-2",
+        "name": "Bench Services & Products",
+        "languaje": [
+          {
+            "id": "es",
+            "prompt": "Favor responder las siguiente preguntas: \n 1. ¿Cuál son las temáticas tratadas en cada canal social por la marca [%COMPANY%]? \n 2. ¿Cuáles son los 5 productos más reconocidos por los clientes de la empresa [%COMPANY%]?"
+          },
+          {
+            "id": "en",
+            "prompt": "Please answer the following questions: \n 1. What are the topics covered on each social channel by the brand [%COMPANY%]? \n 2. What are the 5 most recognized products by the customers of the company [%COMPANY%]?"
+          },
+          {
+            "id": "pt",
+            "prompt": "Por favor responda as seguintes questões: \n 1. Quais são os temas abordados em cada canal social pela marca [%COMPANY%]? \n 2. Quais são os 5 produtos mais reconhecidos pelos clientes da empresa [%COMPANY%]? (A resposta deve ser no idioma portugués)"
+          }
+        ]
+      },
+      {
+        "processid": "BSR-06-D01-3",
+        "name": "Bench competidores",
+        "languaje": [
+          {
+            "id": "es",
+            "prompt": "Crear dos listas para competidores. La primera es una lista de 10 competidores directos en el país [%COUNTRY%]para la empresa [%COMPANY%]. La segunda es una lista de 10 referentes internacionales líderes a nivel mundial que son referentes para [%COMPANY%]."
+          },
+          {
+            "id": "en",
+            "prompt": "Create two lists for competitors. The first is a list of 10 direct competitors in the country [%COUNTRY%] for the company [%COMPANY%]. The second is a list of 10 leading international role models worldwide who are role models for [%COMPANY%]."
+          },
+          {
+            "id": "pt",
+            "prompt": "Crie duas listas de concorrentes. A primeira é uma lista de 10 concorrentes diretos no país [%COUNTRY%] da empresa [%COMPANY%]. A segunda é uma lista dos 10 principais modelos internacionais em todo o mundo que são modelos para [%COMPANY%]. (A resposta deve ser no idioma portugués)"
+          }
+        ]
+      },
+      {
+        "processid": "BSR-03-D01-1",
+        "name": "Industry trends",
+        "languaje": [
+          {
+            "id": "es",
+            "prompt": "Enumerar los 10 pilares que deberíamos tener en cuenta como temas principales de tendencias en la industria de [%INDUSTRY%]"
+          },
+          {
+            "id": "en",
+            "prompt": "List the 10 pillars that we should take into account as main topics and trends in the [%INDUSTRY%] industry"
+          },
+          {
+            "id": "pt",
+            "prompt": "Liste os 10 pilares que devemos levar em conta como principais temas e tendências da indústria [%INDUSTRY%] (A resposta deve ser no idioma portugués)"
+          }
+        ]
+      },
+      {
+        "processid": "BSR-02-D01-1",
+        "name": "Social Topics",
+        "languaje": [
+          {
+            "id": "es",
+            "prompt": "enumerar los 10 temas más comentados en redes sociales relacionados con [%INDUSTRY%] (no incluir números de línea en la lista)"
+          },
+          {
+            "id": "en",
+            "prompt": "list the 10 most commented topics on social networks related to [%INDUSTRY%](do not include line numbers in the list)"
+          },
+          {
+            "id": "pt",
+            "prompt": "Liste os 10 assuntos mais comentados nas redes sociais relacionados a [%INDUSTRY%] (A resposta deve ser no idioma portugués) (não inclua números de linha na lista)"
+          }
+        ]
+      },
+      {
+        "processid": "BSR-02-D01-2",
+        "name": "Social Topics",
+        "languaje": [
+          {
+            "id": "es",
+            "prompt": "enumerar los 10 temas más comentados en redes sociales relacionados con [%COMPANY%] (no incluir números de línea en la lista)"
+          },
+          {
+            "id": "en",
+            "prompt": "list the 10 most commented topics on social networks related to [%COMPANY%] (do not include line numbers in the list)"
+          },
+          {
+            "id": "pt",
+            "prompt": "Liste os 10 assuntos mais comentados nas redes sociais relacionados a [%COMPANY%] (A resposta deve ser no idioma portugués) (não inclua números de linha na lista)"
+          }
+        ]
+      },
+      {
+        "processid": "BSR-05-D01-1",
+        "name": "Unique value proposition Product",
+        "languaje": [
+          {
+            "id": "es",
+            "prompt": "cual podría ser una propuesta única de valor para el producto de [%PRODUCT%] de la empresa [%COMPANY%]?"
+          },
+          {
+            "id": "en",
+            "prompt": "what could be a unique value proposition for the product of [%PRODUCT%] of the company [%COMPANY%]?"
+          },
+          {
+            "id": "pt",
+            "prompt": "qual poderia ser uma proposta de valor única para o produto de [%PRODUCT%] da empresa [%COMPANY%]?(A resposta deve ser no idioma portugués)"
+          }
+        ]
+      },
+      {
+        "processid": "BSR-05-D01-2",
+        "name": "Unique value proposition Service",
+        "languaje": [
+          {
+            "id": "es",
+            "prompt": "cual podría ser una propuesta única de valor para el servicio de [%SERVICE%] de la empresa [%COMPANY%]?"
+          },
+          {
+            "id": "en",
+            "prompt": "What could be a unique value proposition for the service of [%SERVICE%] of the company [%COMPANY%]?"
+          },
+          {
+            "id": "pt",
+            "prompt": "O que poderia ser uma proposta de valor única para o serviço de [%SERVICE%] da empresa [%COMPANY%]?(A resposta deve ser no idioma portugués)"
+          }
+        ]
+      },
+      {
+        "processid": "CRR-01-D01-1",
+        "name": "Brief Creator",
+        "languaje": [
+          {
+            "id": "es",
+            "prompt": "crear un brief para una campaña de publicidad para una empresa de la industria de [%INDUSTRY%] el siguiente es el reto a resolver: [%CHALLENGE%].\n Los elementos a considerar en el brief son los siguientes : Objetivo de la campaña, Descripción del producto o marca , Público objetivo , Plataforma de comunicación , Mensaje clave , Estilo de comunicación ."
+          },
+          {
+            "id": "en",
+            "prompt": "create a brief for an advertising campaign for a company in the industry of [%INDUSTRY%] the following is the challenge to solve: [%CHALLENGE%]. \n The elements to consider in the brief are the following: Objective of the campaign, Description of the product or brand, Target audience, Communication platform, Key message, Communication style."
+          },
+          {
+            "id": "pt",
+            "prompt": "criar um brief para uma campanha publicitária para uma empresa do setor de [%INDUSTRY%] o seguinte é o desafio a resolver: [%CHALLENGE%]. \n Os elementos a considerar no brief são os seguintes: Objetivo da campanha, Descrição do produto ou marca, Público-alvo, Plataforma de comunicação, Mensagem-chave, Estilo de comunicação."
+          }
+        ]
+      },
+      {
+        "processid": "CRR-02-D01-1",
+        "name": "Solution research",
+        "languaje": [
+          {
+            "id": "es",
+            "prompt": "cuales son algunos referentes en [%COUNTRY%] de [%INDUSTRY%] que han implementado campañas para solucionar el siguiente reto: [%CHALLENGE%]"
+          },
+          {
+            "id": "en",
+            "prompt": "Which are some references in [%COUNTRY%] of [%INDUSTRY%] that have implemented campaigns to solve the following challenge: [%CHALLENGE%]"
+          },
+          {
+            "id": "pt",
+            "prompt": "Quais são algumas referências em [%COUNTRY%] de [%INDUSTRY%] que implementaram campanhas para resolver o seguinte desafio: [%CHALLENGE%] (A resposta deve ser no idioma portugués)"
+          }
+        ]
+      },
+      {
+        "processid": "CRO-02-D01-1",
+        "name": "APP name explorer",
+        "languaje": [
+          {
+            "id": "es",
+            "prompt": "quiero crear un app para una [%INDUSTRY%] especializada en [%SPECIALIZED_IN%], favor darme varias ideas de nombres de app que no existan."
+          },
+          {
+            "id": "en",
+            "prompt": "I want to create an app for a [%INDUSTRY%] specialized in [%SPECIALIZED_IN%], please give me several ideas for app names that don't exist."
+          },
+          {
+            "id": "pt",
+            "prompt": "Quero criar um aplicativo para [%INDUSTRY%] especializado em [%SPECIALIZED_IN%], por favor, me dê várias ideias para nomes de aplicativos que não existem. (A resposta deve ser no idioma portugués)"
+          }
+        ]
+      },
+      {
+        "processid": "CRO-02-D01-2",
+        "name": "Domain name explorer",
+        "languaje": [
+          {
+            "id": "es",
+            "prompt": "quiero crear un nuevo sitio web para una [%INDUSTRY%] especializado en [%SPECIALIZED_IN%], favor darme varias ideas de nombres de dominios que no existan."
+          },
+          {
+            "id": "en",
+            "prompt": "I want to create a new website for a [%INDUSTRY%] specialized in [%SPECIALIZED_IN%], please give me several ideas for domain names that do not exist."
+          },
+          {
+            "id": "pt",
+            "prompt": "Quero criar um novo site para uma [%INDUSTRY%] especializada em [%SPECIALIZED_IN%], por favor me dê várias ideias para nomes de domínio que não existem. (A resposta deve ser no idioma portugués)"
+          }
+        ]
+      },
+      {
+        "processid": "CRO-02-D01-3",
+        "name": "Product name explorer",
+        "languaje": [
+          {
+            "id": "es",
+            "prompt": "Quiero crear un nuevo producto para la industria de [%INDUSTRY%] en [%COUNTRY%], quisiera tener una lista de al menos 10 nombres para el nuevo producto , excluyendo nombres que ya existan."
+          },
+          {
+            "id": "en",
+            "prompt": "I want to create a new product for the industry of [%INDUSTRY%] in [%COUNTRY%], I would like to have a list of at least 10 names for the new product, excluding names that already exist."
+          },
+          {
+            "id": "pt",
+            "prompt": "Quero criar um novo produto para a indústria de [%INDUSTRY%] em [%COUNTRY%], gostaria de ter uma lista de pelo menos 10 nomes para o novo produto, excluindo nomes que já existem. (A resposta deve ser no idioma portugués)"
+          }
+        ]
+      },
+      {
+        "processid": "CRO-02-D01-4",
+        "name": "Mascot name explorer",
+        "languaje": [
+          {
+            "id": "es",
+            "prompt": "Quiero crear una nueva mascota para la industria de [%INDUSTRY%] en [%COUNTRY%], quisiera tener una lista de al menos 10 nombres para la mascota , excluyendo nombres que ya existan."
+          },
+          {
+            "id": "en",
+            "prompt": "I want to create a new industry mascot for [%INDUSTRY%] in [%COUNTRY%], I would like to have a list of at least 10 names for the mascot, excluding names that already exist."
+          },
+          {
+            "id": "pt",
+            "prompt": "Quero criar um novo mascote da indústria para [%INDUSTRY%] em [%COUNTRY%], gostaria de ter uma lista de pelo menos 10 nomes para o mascote, excluindo nomes que já existem. (A resposta deve ser no idioma portugués)"
+          }
+        ]
+      },
+      {
+        "processid": "DAR-02-D01-1",
+        "name": "Dummy Contact List",
+        "languaje": [
+          {
+            "id": "es",
+            "prompt": "Crear una lista dummy de 10 personas para el país [%COUNTRY%] con el nombre, apellido, celular, ciudad , país y email. el formato de salida debe ser en columnas."
+          },
+          {
+            "id": "en",
+            "prompt": "Create a dummy list of 10 people for the country [%COUNTRY%] with the name, last name, cell phone, city, country and email. the output format must be columnar."
+          },
+          {
+            "id": "pt",
+            "prompt": "Crie uma lista fictícia de 10 pessoas para o país [%PAÍS%] com o nome, sobrenome, telefone celular, cidade, país e e-mail. o formato de saída deve ser colunar. (A resposta deve ser no idioma portugués)"
+          }
+        ]
+      },
+      {
+        "processid": "DAO-01-D01-1",
+        "name": "Table SQL Query demo",
+        "languaje": [
+          {
+            "id": "es",
+            "prompt": "escribir un SQL query para crear una tabla de [%TABLE%] con 5 atributos. luego escribir un sql query para agregar y otro SQL query para eliminar"
+          },
+          {
+            "id": "en",
+            "prompt": "write an SQL query to create a table of [%TABLE%] with 5 attributes. then write a sql query to add and another sql query to remove"
+          },
+          {
+            "id": "pt",
+            "prompt": "escreva uma consulta SQL para criar uma tabela de [%TABLE%] com 5 atributos. em seguida, escreva uma consulta sql para adicionar e outra consulta sql para remover(A resposta deve ser no idioma portugués)"
+          }
+        ]
+      },
+      {
+        "processid": "DAO-03-D01-1",
+        "name": "Scraping tool in Python",
+        "languaje": [
+          {
+            "id": "es",
+            "prompt": "web scrape [%URL%] using python and beautifulsoup , combine all in one file"
+          },
+          {
+            "id": "en",
+            "prompt": "web scrape [%URL%] using python and beautifulsoup , combine all in one file"
+          },
+          {
+            "id": "pt",
+            "prompt": "web scrape [%URL%] using python and beautifulsoup , combine all in one file"
+          }
+        ]
+      },
+      {
+        "processid": "DAO-01-D01-2",
+        "name": "Email checker",
+        "languaje": [
+          {
+            "id": "es",
+            "prompt": "verificar si existen errores en la siguiente lista de emails: [%EMAIL_LIST%]"
+          },
+          {
+            "id": "en",
+            "prompt": "check if there are errors in the following email list: [%EMAIL_LIST%]"
+          },
+          {
+            "id": "pt",
+            "prompt": "verifique se há erros na seguinte lista de e-mail: [%EMAIL_LIST%] (A resposta deve ser no idioma portugués)"
+          }
+        ]
+      },
+      {
+        "processid": "DAO-01-D01-3",
+        "name": "Name Checker",
+        "languaje": [
+          {
+            "id": "es",
+            "prompt": "En la siguiente lista de nombres de [%COUNTRY%] , se puede observar un nombre o apellido que pueda contener un error? [%NAMES_LIST%]"
+          },
+          {
+            "id": "en",
+            "prompt": "In the following list of names in [%COUNTRY%] , can you see a first or last name that might contain an error? [%NAMES_LIST%]"
+          },
+          {
+            "id": "pt",
+            "prompt": "Na seguinte lista de nomes em [%COUNTRY%] , você pode ver um nome ou sobrenome que pode conter um erro? [%NAMES_LIST%](A resposta deve ser no idioma portugués)"
+          }
+        ]
+      },
+      {
+        "processid": "DAO-01-D01-4",
+        "name": "Name splitter",
+        "languaje": [
+          {
+            "id": "es",
+            "prompt": "de la siguiente lista de nombres y apellidos de personas del país [%COUNTRY%], podría crear una tabla separando el nombre y el apellido en campos diferentes. Gracias [%NAMES_LIST%]"
+          },
+          {
+            "id": "en",
+            "prompt": "From the following list of first and last names of people from country [%COUNTRY%], you could create a table separating the first and last names into different fields. Thank you [%NAMES_LIST%]"
+          },
+          {
+            "id": "pt",
+            "prompt": "A partir da seguinte lista de nomes e sobrenomes de pessoas do país [%PAÍS%], você pode criar uma tabela separando os nomes e sobrenomes em diferentes campos. Obrigado [%NAMES_LIST%] (A resposta deve ser no idioma portugués)"
+          }
+        ]
+      },
+      {
+        "processid": "COO-01-D03-1",
+        "name": "Code checker",
+        "languaje": [
+          {
+            "id": "es",
+            "prompt": "¿podría depurar el siguiente [%PROGRAMMING_LANG%] y buscar errores? [%CODE%]"
+          },
+          {
+            "id": "en",
+            "prompt": "could you debug the following [%PROGRAMMING_LANG%] and look for errors? [%CODE%]"
+          },
+          {
+            "id": "pt",
+            "prompt": "você poderia depurar o seguinte [%PROGRAMMING_LANG%] e procurar por erros? [%CODE%]"
+          }
+        ]
+      },
+      {
+        "processid": "COO-01-D03-2",
+        "name": "JS Checker",
+        "languaje": [
+          {
+            "id": "es",
+            "prompt": "¿Puedes crear una función de prueba de Python para probar que todos los scripts de Java en la página funcionan correctamente? \n [%URL%]"
+          },
+          {
+            "id": "en",
+            "prompt": "can you create a python testing function to test all java scripts in the page are working right? \n [%URL%]"
+          },
+          {
+            "id": "pt",
+            "prompt": "você pode criar uma função de teste python para testar se todos os scripts java na página estão funcionando corretamente? \n [%URL%] (A resposta deve ser no idioma portugués)"
+          }
+        ]
+      },
+      {
+        "processid": "COO-01-D03-3",
+        "name": "CSS Checker",
+        "languaje": [
+          {
+            "id": "es",
+            "prompt": "¿Puedes crear una función de prueba de Python para probar que todo el CSS en la página funciona correctamente? \n [%URL%]"
+          },
+          {
+            "id": "en",
+            "prompt": "can you create a python testing function to test all CSS in the page are working right? \n [%URL%]"
+          },
+          {
+            "id": "pt",
+            "prompt": "você pode criar uma função de teste do python para testar se todos os CSS da página estão funcionando corretamente? \n [%URL%] (A resposta deve ser no idioma portugués)"
+          }
+        ]
+      },
+      {
+        "processid": "COO-01-D03-4",
+        "name": "Images & Alt Tags Checker",
+        "languaje": [
+          {
+            "id": "es",
+            "prompt": "¿Puede crear una función de prueba de Python para probar que todas las imágenes se cargan correctamente y tienen etiquetas alt en la página? \n [%URL%]"
+          },
+          {
+            "id": "en",
+            "prompt": "can you create a python testing function to test all images are loading right and have alt tags in the page ? \n [%URL%]"
+          },
+          {
+            "id": "pt",
+            "prompt": "você pode criar uma função de teste python para testar se todas as imagens estão carregando corretamente e têm tags alt na página? \n [%URL%] (A resposta deve ser no idioma portugués)"
+          }
+        ]
+      },
+      {
+        "processid": "CPO-01-D01-4",
+        "name": "Blog Post Ideas",
+        "languaje": [
+          {
+            "id": "es",
+            "prompt": "por favor generar al menos 10 ideas de temáticas para un post en el blog del sitio [%DOMAIN%] que sean referentes a [%TOPIC%]."
+          },
+          {
+            "id": "en",
+            "prompt": "please generate at least 10 topic ideas for a blog post on the site [%DOMAIN%] that are related to [%TOPIC%]."
+          },
+          {
+            "id": "pt",
+            "prompt": "gere pelo menos 10 ideias de tópicos para uma postagem de blog no site [%DOMAIN%] relacionada a [%TOPIC%]. (A resposta deve ser no idioma portugués)"
+          }
+        ]
+      },
+      {
+        "processid": "LYR-01-D02-1",
+        "name": "Loyalty programs Bench",
+        "languaje": [
+          {
+            "id": "es",
+            "prompt": "cuales son los mejores programas de loyalty en [%COUNTRY%] para el sector de [%INDUSTRY%]?"
+          },
+          {
+            "id": "en",
+            "prompt": "What are the best loyalty programs in [%COUNTRY%] for the [%INDUSTRY%] sector?"
+          },
+          {
+            "id": "pt",
+            "prompt": "Quais são os melhores programas de fidelidade em [%COUNTRY%] para o setor [%INDUSTRY%]? (A resposta deve ser no idioma portugués)"
+          }
+        ]
+      },
+      {
+        "processid": "YR-01-D03-1",
+        "name": "Lotalty tech discovery",
+        "languaje": [
+          {
+            "id": "es",
+            "prompt": "cuales son los mejores plataformas de tecnología para programas de loyalty en el sector de [%INDUSTRY%]?"
+          },
+          {
+            "id": "en",
+            "prompt": "What are the best technology platforms for loyalty programs in the [%INDUSTRY%] sector?"
+          },
+          {
+            "id": "pt",
+            "prompt": "Quais são as melhores plataformas tecnológicas para programas de fidelização no setor [%INDUSTRY%]? (A resposta deve ser no idioma portugués)"
+          }
+        ]
+      },
+      {
+        "processid": "CDO-02-D01-4",
+        "name": "Text to Tweet tool",
+        "languaje": [
+          {
+            "id": "es",
+            "prompt": "favor crear un tuit del siguiente texto : [%TEXT%]"
+          },
+          {
+            "id": "en",
+            "prompt": "Please create a tweet with the following text: [%TEXT%]"
+          },
+          {
+            "id": "pt",
+            "prompt": "Crie um tweet com o seguinte texto: [%TEXT%] (A resposta deve ser no idioma portugués)"
+          }
+        ]
+      },
+      {
+        "processid": "CPO-04-D05-1",
+        "name": "MetaTags generator URL",
+        "languaje": [
+          {
+            "id": "es",
+            "prompt": "asuma que es un experto en SEO y necesita crear los metatags de una página. A continuación recomiendo 2 meta títulos y 2 meta descripciones para la siguiente página. [%URL%]"
+          },
+          {
+            "id": "en",
+            "prompt": "assume you are an SEO expert and need to create a page's meta tags. Next I recommend 2 meta titles and 2 meta descriptions for the next page. [%URL%]"
+          },
+          {
+            "id": "pt",
+            "prompt": "suponha que você seja um especialista em SEO e precise criar as metatags de uma página. Em seguida, recomendo 2 meta títulos e 2 meta descrições para a próxima página. [%URL%]"
+          }
+        ]
+      },
+      {
+        "processid": "CPO-04-D05-2",
+        "name": "MetaTags generator for a content",
+        "languaje": [
+          {
+            "id": "es",
+            "prompt": "asuma que es un experto en SEO y necesita crear los metatags de una página. A continuación recomiendo 2 meta títulos y 2 meta descripciones para el siguiente contenido . [%CONTENT%]"
+          },
+          {
+            "id": "en",
+            "prompt": "assume you are an SEO expert and need to create a page's meta tags. Next I recommend 2 meta titles and 2 meta descriptions for the next text. [%CONTENT%]"
+          },
+          {
+            "id": "pt",
+            "prompt": "suponha que você seja um especialista em SEO e precise criar as metatags de uma página. Em seguida, recomendo 2 meta títulos e 2 meta descrições para o próximo conteúdo. [%CONTENT%]"
+          }
+        ]
+      },
+      {
+        "processid": "CPR-03-D01-1",
+        "name": "Navegation tree design",
+        "languaje": [
+          {
+            "id": "es",
+            "prompt": "asuma que es un experto en contenidos digitales y necesita crear una estructura de árbol de navegación para un portal de contenidos acerca de [%TOPIC%]. Crear un árbol de contenidos para navegación:"
+          },
+          {
+            "id": "en",
+            "prompt": "assume you are a digital content expert and need to create a navigation tree structure for a content portal about [%TOPIC%]. Create a content tree for navigation:"
+          },
+          {
+            "id": "pt",
+            "prompt": "suponha que você seja um especialista em conteúdo digital e precise criar uma estrutura de árvore de navegação para um portal de conteúdo sobre [%TOPIC%]. Crie uma árvore de conteúdo para navegação:"
+          }
+        ]
+      },
+      {
+        "processid": "COR-04-D01-1",
+        "name": "Privacy policy checker",
+        "languaje": [
+          {
+            "id": "es",
+            "prompt": "asuma es un experto legal en privacidad de datos. necesita analizar un aviso de privacidad de un sitio web de empresa de [%INDUSTRY%] en [%COUNTRY%]. Qué le falta o qué cambiaría a estas políticas?[%PRIVACY_POLICY%]"
+          },
+          {
+            "id": "en",
+            "prompt": "asuma is a legal expert in data privacy. you need to review a privacy notice for a company website from [%INDUSTRY%] in [%COUNTRY%]. What is missing or what would you change to these policies?[%PRIVACY_POLICY%]"
+          },
+          {
+            "id": "pt",
+            "prompt": "asuma é um especialista jurídico em privacidade de dados. você precisa revisar um aviso de privacidade para o site de uma empresa de [%INDUSTRY%] em [%PAÍS%]. O que está faltando ou o que você mudaria nessas políticas?[%PRIVACY_POLICY%]"
+          }
+        ]
+      },
+      {
+        "processid": "COO-01-D02-1",
+        "name": "A/B Testing variation generator",
+        "languaje": [
+          {
+            "id": "es",
+            "prompt": "asuma que es un experto en UX y necesita generar micro experimentos para un sitio de una [%INDUSTRY%]. Actualmente se tiene un reto de [%OBJECT_TO_TEST%] que actualmente es [%CURRENT_VAR%] y se requiere generar 5 variaciones para unas pruebas A/B."
+          },
+          {
+            "id": "en",
+            "prompt": "assume you are a UX expert and need to generate micro experiments for a [%INDUSTRY%] site. Currently there is a challenge of [%OBJECT_TO_TEST%] which is currently [%CURRENT_VAR%] and it is required to generate 5 variations for A/B tests."
+          },
+          {
+            "id": "pt",
+            "prompt": "suponha que você seja um especialista em UX e precise gerar micro experimentos para um site [%INDUSTRY%]. Atualmente existe um desafio de [%OBJECT_TO_TEST%] que atualmente é [%CURRENT_VAR%] e é necessário gerar 5 variações para testes A/B."
+          }
+        ]
+      },
+      {
+        "processid": "CPO-01-D01-5",
+        "name": "Summarize text",
+        "languaje": [
+          {
+            "id": "es",
+            "prompt": "resumir el siguiente texto: [%TEXT%]"
+          },
+          {
+            "id": "en",
+            "prompt": "summarize the following text: [%TEXT%]"
+          },
+          {
+            "id": "pt",
+            "prompt": "resuma o seguinte texto: [%TEXT%]"
+          }
+        ]
+      },
+      {
+        "processid": "BSR-01-D01-2",
+        "name": "Insights for Keywords",
+        "languaje": [
+          {
+            "id": "es",
+            "prompt": "Asuma que es un experto en Search ads de Google para la empresa [%COMPANY%] . y necesita sacar unos insights para la estructuración de estrategia de comunicación utilizando como insumo la siguiente lista de palabras claves y en el resultado no numerar las líneas : [%KEYWORD_LIST%]"
+          },
+          {
+            "id": "en",
+            "prompt": "Assume you are a Google Search ads expert for company [%COMPANY%] . and you need to get some insights for structuring the communication strategy and the results should not have number lines and using the following list of keywords as input: [%KEYWORD_LIST%]"
+          },
+          {
+            "id": "pt",
+            "prompt": "Suponha que você seja um especialista em anúncios de pesquisa do Google para a empresa [%COMPANY%] . e você precisa obter alguns insights para estruturar a estratégia de comunicação usando a seguinte lista de palavras-chave como entrada: [%KEYWORD_LIST%]"
+          }
+        ]
+      }
+    ],
+    "languages": [
+      {
+        "name": "ES",
+        "copy": "Ingresa todas las variables a ejecutar para finalzar el prompt:"
+      },
+      {
+        "name": "EN",
+        "copy": "Enter all the variables to execute to finish the prompt:"
+      },
+      {
+        "name": "PT",
+        "copy": "Insira todas as variáveis a serem executadas para finalizar o prompt:"
+      }
+    ]
+  }
